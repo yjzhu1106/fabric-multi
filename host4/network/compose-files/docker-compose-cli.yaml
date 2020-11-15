@@ -119,10 +119,10 @@ services:
         - ./../scripts:/opt/gopath/src/github.com/hyperledger/fabric/peer/scripts/
         - ./../channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer/channel-artifacts
     depends_on:
-      - orderer.fabric-iot.edu
-      - peer0.org1.fabric-iot.edu
-      - peer1.org1.fabric-iot.edu
-      - peer0.org2.fabric-iot.edu
+      - orderer4.fabric-iot.edu
+      # - peer0.org1.fabric-iot.edu
+      # - peer1.org1.fabric-iot.edu
+      # - peer0.org2.fabric-iot.edu
       - peer1.org2.fabric-iot.edu
     networks:
       - bc_net

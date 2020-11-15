@@ -96,4 +96,4 @@ function runScript() {
 }
 
 networkUp
-runScript
+#runScript
