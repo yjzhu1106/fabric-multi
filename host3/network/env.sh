@@ -40,5 +40,6 @@ export COMPOSE_PROJECT_NAME=iot
 export IMAGE_TAG=$IMAGE_TAG
 export SYS_CHANNEL=$SYS_CHANNEL
 export CONSENSUS_TYPE=$CONSENSUS_TYPE
+export NETWORK=first-network
 # conn conf
 CONN_CONF_PATH=conn-conf

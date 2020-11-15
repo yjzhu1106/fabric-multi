@@ -97,3 +97,6 @@ function runScript() {
 
 networkUp
 runScript
+#docker cp cli:/opt/gopath/src/github.com/hyperledger/fabric/peer/iot-channel.block ./channel-artifacts/
+
+

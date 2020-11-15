@@ -38,16 +38,16 @@ setGlobals() {
     if [ $PEER -eq 0 ]; then
       CORE_PEER_ADDRESS=peer0.org1.fabric-iot.edu:7051
     else
-      CORE_PEER_ADDRESS=peer1.org1.fabric-iot.edu:8051
+      CORE_PEER_ADDRESS=peer1.org1.fabric-iot.edu:7051
     fi
   elif [ $ORG -eq 2 ]; then
     CORE_PEER_LOCALMSPID="Org2MSP"
     CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
     CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.fabric-iot.edu/users/Admin@org2.fabric-iot.edu/msp
     if [ $PEER -eq 0 ]; then
-      CORE_PEER_ADDRESS=peer0.org2.fabric-iot.edu:9051
+      CORE_PEER_ADDRESS=peer0.org2.fabric-iot.edu:7051
     else
-      CORE_PEER_ADDRESS=peer1.org2.fabric-iot.edu:10051
+      CORE_PEER_ADDRESS=peer1.org2.fabric-iot.edu:7051
     fi
 
   elif [ $ORG -eq 3 ]; then
@@ -55,9 +55,9 @@ setGlobals() {
     CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG3_CA
     CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org3.fabric-iot.edu/users/Admin@org3.fabric-iot.edu/msp
     if [ $PEER -eq 0 ]; then
-      CORE_PEER_ADDRESS=peer0.org3.fabric-iot.edu:11051
+      CORE_PEER_ADDRESS=peer0.org3.fabric-iot.edu:7051
     else
-      CORE_PEER_ADDRESS=peer1.org3.fabric-iot.edu:12051
+      CORE_PEER_ADDRESS=peer1.org3.fabric-iot.edu:7051
     fi
   else
     echo "================== ERROR !!! ORG Unknown =================="
