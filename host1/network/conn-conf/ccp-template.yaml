@@ -1,0 +1,43 @@
+---
+name: first-network-org${ORG}
+version: 1.0.0
+client:
+  organization: Org${ORG}
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  Org${ORG}:
+    mspid: Org${ORG}MSP
+    peers:
+    - peer0.org${ORG}.fabric-iot.edu
+    - peer1.org${ORG}.fabric-iot.edu
+    certificateAuthorities:
+    - ca.org${ORG}.fabric-iot.edu
+peers:
+  peer0.org${ORG}.fabric-iot.edu:
+    url: grpcs://${P0PORT}
+    tlsCACerts:
+      pem: |
+        ${PEERPEM}
+    grpcOptions:
+      ssl-target-name-override: peer0.org${ORG}.fabric-iot.edu
+      hostnameOverride: peer0.org${ORG}.fabric-iot.edu
+  peer1.org${ORG}.fabric-iot.edu:
+    url: grpcs://${P1PORT}
+    tlsCACerts:
+      pem: |
+        ${PEERPEM}
+    grpcOptions:
+      ssl-target-name-override: peer1.org${ORG}.fabric-iot.edu
+      hostnameOverride: peer1.org${ORG}.fabric-iot.edu
+certificateAuthorities:
+  ca.org${ORG}.fabric-iot.edu:
+    url: https://${CAPORT}
+    caName: ca-org${ORG}
+    tlsCACerts:
+      pem: |
+        ${CAPEM}
+    httpOptions:
+      verify: false
