@@ -7,8 +7,8 @@ version: '2'
 
 volumes:
   # orderer.fabric-iot.edu:
-  orderer2.fabric-iot.edu:
-  # orderer3.fabric-iot.edu:
+  # orderer2.fabric-iot.edu:
+  orderer3.fabric-iot.edu:
   # orderer4.fabric-iot.edu:
   # peer0.org1.fabric-iot.edu:
   peer1.org1.fabric-iot.edu:
