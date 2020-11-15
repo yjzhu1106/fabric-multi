@@ -51,19 +51,25 @@ createChannel() {
 }
 
 joinChannel () {
-	for org in 1 2; do
-	    for peer in 0 1; do
-		joinChannelWithRetry $peer $org
-		echo "===================== peer${peer}.org${org} joined channel '$CHANNEL_NAME' ===================== "
-		sleep $DELAY
-		echo
-	    done
-	done
+	# for org in 1 2; do
+	#     for peer in 0 1; do
+	# 	joinChannelWithRetry $peer $org
+	# 	echo "===================== peer${peer}.org${org} joined channel '$CHANNEL_NAME' ===================== "
+	# 	sleep $DELAY
+	# 	echo
+	#     done
+	# done
+	org=1
+	peer=1
+	joinChannelWithRetry $peer $org
+	echo "===================== peer${peer}.org${org} joined channel '$CHANNEL_NAME' ===================== "
+	sleep $DELAY
+	echo
 }
 
 ## Create channel
-echo "Creating channel..."
-createChannel
+# echo "Creating channel..."
+# createChannel
 
 # Waiting for channel created
 echo "Waiting for channel created:"
@@ -79,10 +85,10 @@ echo "Having all peers join the channel..."
 joinChannel
 
 ## Set the anchor peers for each org in the channel
-echo "Updating anchor peers for org1..."
-updateAnchorPeers 0 1
-echo "Updating anchor peers for org2..."
-updateAnchorPeers 0 2
+# echo "Updating anchor peers for org1..."
+# updateAnchorPeers 0 1
+# echo "Updating anchor peers for org2..."
+# updateAnchorPeers 0 2
 
 echo
 echo "========= All GOOD, [fabric-iot] execution completed =========== "
