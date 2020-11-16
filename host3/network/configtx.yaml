@@ -381,10 +381,10 @@ Profiles:
                   Port: 7050
                   ClientTLSCert: crypto-config/ordererOrganizations/fabric-iot.edu/orderers/orderer3.fabric-iot.edu/tls/server.crt
                   ServerTLSCert: crypto-config/ordererOrganizations/fabric-iot.edu/orderers/orderer3.fabric-iot.edu/tls/server.crt
-                - Host: orderer4.fabric-iot.edu
-                  Port: 7050
-                  ClientTLSCert: crypto-config/ordererOrganizations/fabric-iot.edu/orderers/orderer4.fabric-iot.edu/tls/server.crt
-                  ServerTLSCert: crypto-config/ordererOrganizations/fabric-iot.edu/orderers/orderer4.fabric-iot.edu/tls/server.crt
+                # - Host: orderer4.fabric-iot.edu
+                #   Port: 7050
+                #   ClientTLSCert: crypto-config/ordererOrganizations/fabric-iot.edu/orderers/orderer4.fabric-iot.edu/tls/server.crt
+                #   ServerTLSCert: crypto-config/ordererOrganizations/fabric-iot.edu/orderers/orderer4.fabric-iot.edu/tls/server.crt
                 # - Host: orderer5.fabric-iot.edu
                 #   Port: 7050
                 #   ClientTLSCert: crypto-config/ordererOrganizations/fabric-iot.edu/orderers/orderer5.fabric-iot.edu/tls/server.crt
@@ -393,7 +393,7 @@ Profiles:
                 - orderer.fabric-iot.edu:7050
                 - orderer2.fabric-iot.edu:7050
                 - orderer3.fabric-iot.edu:7050
-                - orderer4.fabric-iot.edu:7050
+                # - orderer4.fabric-iot.edu:7050
                 # - orderer5.fabric-iot.edu:7050
 
             Organizations:

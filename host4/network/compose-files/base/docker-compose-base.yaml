@@ -49,18 +49,18 @@ services:
   #     - 9050:7050
 
 
-  orderer4.fabric-iot.edu:
-    container_name: orderer4.fabric-iot.edu
-    extends:
-      file: peer-base.yaml
-      service: orderer-base
-    volumes:
-        - ../../channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
-        - ../../crypto-config/ordererOrganizations/fabric-iot.edu/orderers/orderer4.fabric-iot.edu/msp:/var/hyperledger/orderer/msp
-        - ../../crypto-config/ordererOrganizations/fabric-iot.edu/orderers/orderer4.fabric-iot.edu/tls/:/var/hyperledger/orderer/tls
-        - orderer4.fabric-iot.edu:/var/hyperledger/production/orderer
-    ports:
-      - 7050:7050
+  # orderer4.fabric-iot.edu:
+  #   container_name: orderer4.fabric-iot.edu
+  #   extends:
+  #     file: peer-base.yaml
+  #     service: orderer-base
+  #   volumes:
+  #       - ../../channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+  #       - ../../crypto-config/ordererOrganizations/fabric-iot.edu/orderers/orderer4.fabric-iot.edu/msp:/var/hyperledger/orderer/msp
+  #       - ../../crypto-config/ordererOrganizations/fabric-iot.edu/orderers/orderer4.fabric-iot.edu/tls/:/var/hyperledger/orderer/tls
+  #       - orderer4.fabric-iot.edu:/var/hyperledger/production/orderer
+  #   ports:
+  #     - 7050:7050
 
 
 

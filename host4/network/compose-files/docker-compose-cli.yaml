@@ -9,7 +9,7 @@ volumes:
   # orderer.fabric-iot.edu:
   # orderer2.fabric-iot.edu:
   # orderer3.fabric-iot.edu:
-  orderer4.fabric-iot.edu:
+  # orderer4.fabric-iot.edu:
   # peer0.org1.fabric-iot.edu:
   # peer1.org1.fabric-iot.edu:
   # peer0.org2.fabric-iot.edu:
@@ -46,13 +46,13 @@ services:
   #   networks:
   #     - bc_net
 
-  orderer4.fabric-iot.edu:
-    extends:
-      file:   base/docker-compose-base.yaml
-      service: orderer4.fabric-iot.edu
-    container_name: orderer4.fabric-iot.edu
-    networks:
-      - bc_net
+  # orderer4.fabric-iot.edu:
+  #   extends:
+  #     file:   base/docker-compose-base.yaml
+  #     service: orderer4.fabric-iot.edu
+  #   container_name: orderer4.fabric-iot.edu
+  #   networks:
+  #     - bc_net
 
   # peer0.org1.fabric-iot.edu:
   #   container_name: peer0.org1.fabric-iot.edu
