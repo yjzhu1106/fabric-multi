@@ -148,10 +148,10 @@ function upgradeCC() {
 # set -x
 
 # install cc
-# installCC 1 0 7051
+installCC 1 0 7051
 installCC 1 1 7051
-# installCC 2 0 9051
-# installCC 2 1 10051
+installCC 2 0 7051
+installCC 2 1 7051
 # init
 if [ $ACTION = 'install' ]; then
   initCC

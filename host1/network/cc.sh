@@ -8,7 +8,7 @@ export MSYS_NO_PATHCONV=1
 starttime=$(date +%s)
 # use golang as programing language
 CC_RUNTIME_LANGUAGE=golang
-CC_SRC_PATH=github.com/yjzhu1106/fabric-single/chaincode/go/apmc
+CC_SRC_PATH=github.com/yjzhu1106/fabric-multi/host1/chaincode/go/apmc
 CC_NAME=apmc
 CC_VERSION=1.0
 CC_INVOKE_FUNC_NAME="Synchro"
@@ -29,7 +29,7 @@ if [ -n $1 -a -n $2 -a -n $3 -a -n $4 ]; then
   ACTION=$1
   CC_NAME=$2
   CC_VERSION=$3
-  CC_SRC_PATH="github.com/yjzhu1106/fabric-single/chaincode/$4"
+  CC_SRC_PATH="github.com/yjzhu1106/fabric-multi/host1/chaincode/$4"
   if [ ! $5 = '' ]; then
     CC_INVOKE_FUNC_NAME=$5
   fi
@@ -149,9 +149,9 @@ function upgradeCC() {
 
 # install cc
 installCC 1 0 7051
-# installCC 1 1 8051
-# installCC 2 0 9051
-# installCC 2 1 10051
+installCC 1 1 7051
+installCC 2 0 7051
+installCC 2 1 7051
 # init
 if [ $ACTION = 'install' ]; then
   initCC
