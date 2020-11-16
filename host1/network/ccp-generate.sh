@@ -31,9 +31,9 @@ function yaml_ccp {
 }
 
 ORG=1
-P0PORT=10.10.45.66:7051
-P1PORT=10.10.45.67:7051
-CAPORT=10.10.45.66:7054
+P0PORT=10.10.39.70:7051
+P1PORT=10.10.53.49:7051
+CAPORT=10.10.39.70:7054
 PEERPEM=crypto-config/peerOrganizations/org1.fabric-iot.edu/tlsca/tlsca.org1.fabric-iot.edu-cert.pem
 CAPEM=crypto-config/peerOrganizations/org1.fabric-iot.edu/ca/ca.org1.fabric-iot.edu-cert.pem
 
@@ -41,9 +41,9 @@ echo "$(json_ccp $ORG $P0PORT $P1PORT $CAPORT $PEERPEM $CAPEM)" > $CONN_CONF_PAT
 echo "$(yaml_ccp $ORG $P0PORT $P1PORT $CAPORT $PEERPEM $CAPEM)" > $CONN_CONF_PATH/connection-org1.yaml
 
 ORG=2
-P0PORT=10.10.45.68:7051
-P1PORT=10.10.39.70:7051
-CAPORT=10.10.45.68:7054
+P0PORT=10.10.53.50:7051
+P1PORT=10.10.53.51:7051
+CAPORT=10.10.53.50:7054
 PEERPEM=crypto-config/peerOrganizations/org2.fabric-iot.edu/tlsca/tlsca.org2.fabric-iot.edu-cert.pem
 CAPEM=crypto-config/peerOrganizations/org2.fabric-iot.edu/ca/ca.org2.fabric-iot.edu-cert.pem
 

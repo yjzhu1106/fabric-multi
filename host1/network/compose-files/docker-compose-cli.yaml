@@ -112,9 +112,7 @@ services:
     volumes:
         - /var/run/:/host/var/run/
         - ./../../chaincode/:/opt/gopath/src/github.com/yjzhu1106/fabric-multi/host1/chaincode
-        # - ./../../../../../../src/github.com/ethereum/go-ethereum:/opt/gopath/src/github.com/ethereum/go-ethereum
-        - ./../../../../../../src/:/opt/gopath/src/
-        # - ./../../chaincode/go/pdpc/vendor/github.com:/opt/gopath/src/github.com
+        - ./../../../../../../../src/:/opt/gopath/src/
         - ./../crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
         - ./../scripts:/opt/gopath/src/github.com/hyperledger/fabric/peer/scripts/
         - ./../channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer/channel-artifacts
